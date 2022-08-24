@@ -5,6 +5,8 @@ import {Row, Col, Collapse} from 'antd'
 import 'antd/dist/antd.css'
 import {Button, Form, Input, Radio} from 'antd';
 import "@fontsource/bebas-neue"
+//import "@fontsource/fira-sans"
+import { CaretRightOutlined } from '@ant-design/icons';
 
 const { Panel } = Collapse;
 
@@ -56,6 +58,7 @@ function App() {
     // console.log(zoom)
 
     const handleFinish = (e) => {
+        console.log('xxx')
         console.log(e)
     }
 
@@ -71,13 +74,51 @@ function App() {
                       onFinish={handleFinish}
                       //onValuesChange={onFormLayoutChange}
                   >
-                      <Form.Item name="codigo">
-                          <Input size='large' placeholder="Codigo"/>
+                      <Form.Item name="nombre"
+                         rules={[
+                             {
+                                 required: true,
+                                 type: "string",
+                                 pattern: new RegExp(/([a-z]|[A-Z]| |á|é|í|ó|ú|Á|É|Í|Ó|Ú|ñ|Ñ])/g),
+                                 message: "Formato de nombres incorrecto!"
+                             }
+                         ]}
+                     >
+                        <Input size='large' placeholder="Nombres"/>
                       </Form.Item>
-                      <Form.Item name="celular">
+                      <Form.Item name="codigo"
+                         rules={[
+                             {
+                                 required: true,
+                                 type: "string",
+                                 pattern: new RegExp(/(059|06[0-9]|07[0-9]|08[0-9]|09[0-9]|1[0-9][0-9]|20[0-1][0-9])[0-9][0-9][0-9][0-9][0-9][0-9][0-9]/g),
+                                 message: "Formato de código incorrecto!"
+                             }
+                         ]}
+                      >
+                      <Input size='large' placeholder="Codigo"/>
+                      </Form.Item>
+                      <Form.Item name="celular"
+                                 rules={[
+                                     {
+                                         required: true,
+                                         type: "string",
+                                         pattern: new RegExp(/9[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]/g),
+                                         message: "Formato de celular incorrecto!"
+                                     },
+                                 ]}
+                      >
                           <Input size='large' placeholder="Celular"/>
                       </Form.Item>
-                      <Form.Item name="correo">
+                      <Form.Item name="correo"
+                                 rules={[
+                                     {
+                                         required: true,
+                                         type: "email",
+                                         message: "Formato de correo incorrecto!"
+                                     },
+                                 ]}
+                      >
                           <Input size='large' placeholder="Correo Personal"/>
                       </Form.Item>
                       <Form.Item>
@@ -88,11 +129,15 @@ function App() {
           </div>
           <div className={styles.bannerB}>
               <img src="./assets/images/B.png" style={{objectFit: 'cover', width: '100%'}}/>
-          </div>
+          </div>s
           <div className={styles.bannerC}>
               <img src="./assets/images/C.png" style={{objectFit: 'cover', width: '100%'}}/>
               <div className={styles.insertC}>
-                  <Collapse accordion>
+                  <Collapse accordion
+                            ghost
+                            expandIcon={({ isActive }) => <CaretRightOutlined style={{color: 'pink'}} rotate={isActive ? 90 : 0} />}
+                  >
+
                       <Panel header="This is panel header 1" key="1">
                           <p>A</p>
                       </Panel>
@@ -105,8 +150,26 @@ function App() {
                   </Collapse>
               </div>
           </div>
-          <div className={styles.bannerB}>
+          <div className={styles.bannerD}>
               <img src="./assets/images/D.png" style={{objectFit: 'cover', width: '100%'}}/>
+              <div className={styles.insertD}>
+                  <Collapse accordion
+                            ghost
+                            expandIcon={({ isActive }) => <CaretRightOutlined style={{color: 'pink'}} rotate={isActive ? 90 : 0} />}
+                  >
+
+                      <Panel header="This is panel header 1" key="1">
+                          <p>A</p>
+                      </Panel>
+                      <Panel header="This is panel header 2" key="2">
+                          <p>B</p>
+                      </Panel>
+                      <Panel header="This is panel header 3" key="3">
+                          <p>C</p>
+                      </Panel>
+                  </Collapse>
+              </div>
+
           </div>
           <div className={styles.bannerB}>
               <img src="./assets/images/E.png" style={{objectFit: 'cover', width: '100%'}}/>

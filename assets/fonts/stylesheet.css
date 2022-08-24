@@ -1,0 +1,168 @@
+@font-face {
+    font-family: 'Fivo Sans';
+    src: url('FivoSans-Black.eot');
+    src: url('FivoSans-Black.eot?#iefix') format('embedded-opentype'),
+        url('FivoSans-Black.woff2') format('woff2'),
+        url('FivoSans-Black.woff') format('woff'),
+        url('FivoSans-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fivo Sans';
+    src: url('FivoSans-HeavyOblique.eot');
+    src: url('FivoSans-HeavyOblique.eot?#iefix') format('embedded-opentype'),
+        url('FivoSans-HeavyOblique.woff2') format('woff2'),
+        url('FivoSans-HeavyOblique.woff') format('woff'),
+        url('FivoSans-HeavyOblique.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fivo Sans';
+    src: url('FivoSans-LightOblique.eot');
+    src: url('FivoSans-LightOblique.eot?#iefix') format('embedded-opentype'),
+        url('FivoSans-LightOblique.woff2') format('woff2'),
+        url('FivoSans-LightOblique.woff') format('woff'),
+        url('FivoSans-LightOblique.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fivo Sans';
+    src: url('FivoSans-BlackOblique.eot');
+    src: url('FivoSans-BlackOblique.eot?#iefix') format('embedded-opentype'),
+        url('FivoSans-BlackOblique.woff2') format('woff2'),
+        url('FivoSans-BlackOblique.woff') format('woff'),
+        url('FivoSans-BlackOblique.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fivo Sans';
+    src: url('FivoSans-Bold.eot');
+    src: url('FivoSans-Bold.eot?#iefix') format('embedded-opentype'),
+        url('FivoSans-Bold.woff2') format('woff2'),
+        url('FivoSans-Bold.woff') format('woff'),
+        url('FivoSans-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fivo Sans';
+    src: url('FivoSans-Medium.eot');
+    src: url('FivoSans-Medium.eot?#iefix') format('embedded-opentype'),
+        url('FivoSans-Medium.woff2') format('woff2'),
+        url('FivoSans-Medium.woff') format('woff'),
+        url('FivoSans-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fivo Sans';
+    src: url('FivoSans-Heavy.eot');
+    src: url('FivoSans-Heavy.eot?#iefix') format('embedded-opentype'),
+        url('FivoSans-Heavy.woff2') format('woff2'),
+        url('FivoSans-Heavy.woff') format('woff'),
+        url('FivoSans-Heavy.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fivo Sans';
+    src: url('FivoSans-Light.eot');
+    src: url('FivoSans-Light.eot?#iefix') format('embedded-opentype'),
+        url('FivoSans-Light.woff2') format('woff2'),
+        url('FivoSans-Light.woff') format('woff'),
+        url('FivoSans-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fivo Sans';
+    src: url('FivoSans-BoldOblique.eot');
+    src: url('FivoSans-BoldOblique.eot?#iefix') format('embedded-opentype'),
+        url('FivoSans-BoldOblique.woff2') format('woff2'),
+        url('FivoSans-BoldOblique.woff') format('woff'),
+        url('FivoSans-BoldOblique.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fivo Sans';
+    src: url('FivoSans-MediumOblique.eot');
+    src: url('FivoSans-MediumOblique.eot?#iefix') format('embedded-opentype'),
+        url('FivoSans-MediumOblique.woff2') format('woff2'),
+        url('FivoSans-MediumOblique.woff') format('woff'),
+        url('FivoSans-MediumOblique.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fivo Sans';
+    src: url('FivoSans-Oblique.eot');
+    src: url('FivoSans-Oblique.eot?#iefix') format('embedded-opentype'),
+        url('FivoSans-Oblique.woff2') format('woff2'),
+        url('FivoSans-Oblique.woff') format('woff'),
+        url('FivoSans-Oblique.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fivo Sans';
+    src: url('FivoSans-Regular.eot');
+    src: url('FivoSans-Regular.eot?#iefix') format('embedded-opentype'),
+        url('FivoSans-Regular.woff2') format('woff2'),
+        url('FivoSans-Regular.woff') format('woff'),
+        url('FivoSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fivo Sans';
+    src: url('FivoSans-Thin.eot');
+    src: url('FivoSans-Thin.eot?#iefix') format('embedded-opentype'),
+        url('FivoSans-Thin.woff2') format('woff2'),
+        url('FivoSans-Thin.woff') format('woff'),
+        url('FivoSans-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fivo Sans';
+    src: url('FivoSans-ThinOblique.eot');
+    src: url('FivoSans-ThinOblique.eot?#iefix') format('embedded-opentype'),
+        url('FivoSans-ThinOblique.woff2') format('woff2'),
+        url('FivoSans-ThinOblique.woff') format('woff'),
+        url('FivoSans-ThinOblique.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+

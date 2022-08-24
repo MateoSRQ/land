@@ -45,13 +45,13 @@ html, body, :global(#root) {
   transform-origin: top center;
 }
 
-.bannerC {
+.bannerC, .bannerD {
   position: relative;
 }
 
 .insertC {
   position: absolute;
-  left: 30px;
+  left: 190px;
   top: 583px;
   width: 700px;
   padding: 12px;
@@ -60,19 +60,57 @@ html, body, :global(#root) {
   border-radius: 16px;
 }
 
+.insertD {
+  position: absolute;
+  right: 220px;
+  top: 400px;
+  width: 700px;
+  padding: 12px;
+  padding-bottom: 12px;
+  background-color: transparent;
+  border-radius: 16px;
+}
+
 .main :global(.ant-collapse)  {
-  background-color: #17c6de !important;
+  /*background-color: #17c6de !important;*/
   border: none !important;
   border-radius: 12px !important;
   color: #4a49b0 !important;
   font-size: 20px !important;
+  /*background-color: ;*/
 }
 
 .main :global(.ant-collapse) * {
-  background-color: #17c6de !important;
+  /*background-color: #17c6de !important;*/
   border: none !important;
-  border-radius: 12px !important;
+  border-radius: 30px !important;
   color: #4a49b0 !important;
-  font-family: "Bebas Neue", cursive !important;
-  font-size: 20px !important;
+  font-family: "Fivo Sans", cursive !important;
+  font-size: 24px !important;
+  font-weight: 800 !important;
+  font-style: italic;
+  letter-spacing: -.7px;
 }
+
+.main :global(.ant-collapse) :global(.ant-collapse-content) {
+  background-color: transparent !important;
+}
+
+.main :global(.ant-collapse) :global(.ant-collapse-content) * {
+  background-color: transparent !important;
+  color: white !important;
+  margin-left: 20px !important;
+}
+
+.main :global(.ant-collapse-header) {
+  background-color: #17c6de !important;
+  margin-bottom: 15px;
+}
+
+.main :global(.ant-collapse-content-active) {
+  background-color: transparent !important;
+  color: white !important;
+}
+
+
+
