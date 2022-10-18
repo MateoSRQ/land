@@ -1,7 +1,7 @@
 import {useEffect, useState} from 'react'
 import styles from './index.module.css'
 import useDimensions from "react-use-dimensions";
-import {Row, Col, Collapse} from 'antd'
+import {Row, Col, Collapse, Carousel, BackTop} from 'antd'
 import 'antd/dist/antd.css'
 import {Button, Form, Input, Radio} from 'antd';
 import "@fontsource/bebas-neue"
@@ -42,7 +42,7 @@ function useWindowSize() {
 function App() {
     const size = useWindowSize();
     const [form] = Form.useForm();
-
+    const [buttonStatus, setButtonStatus] = useState(false)
 
     console.log(size)
 
@@ -62,24 +62,38 @@ function App() {
         console.log(e)
     }
 
+    const onFormLayoutChange = async() => {
+        console.log('xxx')
+        try {
+            await form.validateFields()
+            setButtonStatus(true)
+        }
+        catch(e) {
+            console.log('xy')
+            console.log(e)
+            setButtonStatus(!e.errorFields.length)
+        }
+    }
+
   return (
 
       <div className={styles.main} style={{zoom: `${vector}`}}>
+          <BackTop />
           <div className={styles.bannerA}>
               <img src="./assets/images/A.png" style={{objectFit: 'cover', width: '100%'}}/>
               <div className={styles.insert}>
                   <Form
                       layout='vertical'
                       form={form}
-                      onFinish={handleFinish}
-                      //onValuesChange={onFormLayoutChange}
+                      //onFinish={handleFinish}
+                      onValuesChange={onFormLayoutChange}
                   >
                       <Form.Item name="nombre"
                          rules={[
                              {
                                  required: true,
                                  type: "string",
-                                 pattern: new RegExp(/([a-z]|[A-Z]| |á|é|í|ó|ú|Á|É|Í|Ó|Ú|ñ|Ñ])/g),
+                                 pattern: new RegExp(/^([a-z]|[A-Z]| |á|é|í|ó|ú|Á|É|Í|Ó|Ú|ñ|Ñ)+$/),
                                  message: "Formato de nombres incorrecto!"
                              }
                          ]}
@@ -91,7 +105,7 @@ function App() {
                              {
                                  required: true,
                                  type: "string",
-                                 pattern: new RegExp(/(059|06[0-9]|07[0-9]|08[0-9]|09[0-9]|1[0-9][0-9]|20[0-1][0-9])[0-9][0-9][0-9][0-9][0-9][0-9][0-9]/g),
+                                 pattern: new RegExp(/^(059|06[0-9]|07[0-9]|08[0-9]|09[0-9]|1[0-9][0-9]|20[0-1][0-9])[0-9][0-9][0-9][0-9][0-9][0-9][0-9]$/),
                                  message: "Formato de código incorrecto!"
                              }
                          ]}
@@ -103,7 +117,7 @@ function App() {
                                      {
                                          required: true,
                                          type: "string",
-                                         pattern: new RegExp(/9[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]/g),
+                                         pattern: new RegExp(/^9[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]$/),
                                          message: "Formato de celular incorrecto!"
                                      },
                                  ]}
@@ -122,14 +136,14 @@ function App() {
                           <Input size='large' placeholder="Correo Personal"/>
                       </Form.Item>
                       <Form.Item>
-                          <Button htmlType="submit" size='large' block type="primary">ENVIAR</Button>
+                          <Button htmlType="submit" size='large' block type="primary" disabled={!buttonStatus}>ENVIAR</Button>
                       </Form.Item>
                   </Form>
               </div>
           </div>
           <div className={styles.bannerB}>
               <img src="./assets/images/B.png" style={{objectFit: 'cover', width: '100%'}}/>
-          </div>s
+          </div>
           <div className={styles.bannerC}>
               <img src="./assets/images/C.png" style={{objectFit: 'cover', width: '100%'}}/>
               <div className={styles.insertC}>
@@ -138,14 +152,36 @@ function App() {
                             expandIcon={({ isActive }) => <CaretRightOutlined style={{color: 'pink'}} rotate={isActive ? 90 : 0} />}
                   >
 
-                      <Panel header="This is panel header 1" key="1">
-                          <p>A</p>
+                      <Panel header="Facultad de Ciencias Empresariales y Educación" key="1">
+                          <ul>
+                              <li>Administración y Negocios Internacionales</li>
+                              <li>Ciencias Contables y Financieras</li>
+                              <li>Turismo, Hotelería y Gastronomía</li>
+                              <li>Ciencias de la Comunicación</li>
+                              <li>Ciencias del Deporte</li>
+                              <li>Educación</li>
+                          </ul>
                       </Panel>
-                      <Panel header="This is panel header 2" key="2">
-                          <p>B</p>
+                      <Panel header="Facultad de Derecho y Ciencias Políticas" key="2">
+                          <ul>
+                              <li>Derecho</li>
+                          </ul>
                       </Panel>
-                      <Panel header="This is panel header 3" key="3">
-                          <p>C</p>
+                      <Panel header="Facultad de Ingeniería y Arquitectura" key="3">
+                              <ul>
+                                  <li>Ingeniería Civil</li>
+                                  <li>Ingeniería Ambiental</li>
+                                  <li>Ingeniería de Minas</li>
+                                  <li>Ingeniería Mecánica</li>
+                                  <li>Ingeniería de Sistemas e Informática</li>
+                                  <li>Ingeniería Electrónica y Telecomunicaciones</li>
+                                  <li>Ingeniería Industrial</li>
+                              </ul>
+                      </Panel>
+                      <Panel header="Facultad de Ciencias Agropecuarias" key="4">
+                          <ul>
+                              <li>Medicina Veterinaria</li>
+                          </ul>
                       </Panel>
                   </Collapse>
               </div>
@@ -158,14 +194,23 @@ function App() {
                             expandIcon={({ isActive }) => <CaretRightOutlined style={{color: 'pink'}} rotate={isActive ? 90 : 0} />}
                   >
 
-                      <Panel header="This is panel header 1" key="1">
-                          <p>A</p>
+                      <Panel header="Facultad de Medicina Humana y Ciencias de la Salud" key="1">
+                          <ul>
+                              <li>Estomatología</li>
+                              <li>Enfermería</li>
+                              <li>Nutrición Humana</li>
+                              <li>Psicología Humana</li>
+                              <li>Gerontología</li>
+                              <li>Medicina Humana</li>
+                              <li>Farmacia y Bioquímica</li>
+                              <li>Obstetricia</li>
+                              <li>Tecnología Médica</li>
+                          </ul>
                       </Panel>
-                      <Panel header="This is panel header 2" key="2">
-                          <p>B</p>
-                      </Panel>
-                      <Panel header="This is panel header 3" key="3">
-                          <p>C</p>
+                      <Panel header="Escuela Profesional de Arquitectura" key="2">
+                          <ul>
+                              <li>Arquitectura</li>
+                          </ul>
                       </Panel>
                   </Collapse>
               </div>
@@ -173,6 +218,61 @@ function App() {
           </div>
           <div className={styles.bannerB}>
               <img src="./assets/images/E.png" style={{objectFit: 'cover', width: '100%'}}/>
+              <div className={styles.carousel}>
+                  <Carousel dots={false} autoplay>
+                      <div>
+                          <div className={styles.carouselitem}>
+                              <div className={styles.video}></div>
+                              <div className={styles.text1}>Pedro Costa</div>
+                              <div className={styles.text2}>Estudiante de Ingeniería</div>
+                          </div>
+                          <div className={styles.carouselitem}>
+                              <div className={styles.video}></div>
+                              <div className={styles.text1}>Ana Flores</div>
+                              <div className={styles.text2}>Estudiante de Medicina Humana</div>
+                          </div>
+                          <div className={styles.carouselitem}>
+                              <div className={styles.video}></div>
+                              <div className={styles.text1}>Carlos Esquivel</div>
+                              <div className={styles.text2}>Estudiante de Arquitectura</div>
+                          </div>
+                      </div>
+                      <div>
+                          <div className={styles.carouselitem}>
+                              <div className={styles.video}></div>
+                              <div className={styles.text1}>Pedro Costa</div>
+                              <div className={styles.text2}>Estudiante de Ingeniería</div>
+                          </div>
+                          <div className={styles.carouselitem}>
+                              <div className={styles.video}></div>
+                              <div className={styles.text1}>Ana Flores</div>
+                              <div className={styles.text2}>Estudiante de Medicina Humana</div>
+                          </div>
+                          <div className={styles.carouselitem}>
+                              <div className={styles.video}></div>
+                              <div className={styles.text1}>Carlos Esquivel</div>
+                              <div className={styles.text2}>Estudiante de Arquitectura</div>
+                          </div>
+                      </div>
+                      <div>
+                          <div className={styles.carouselitem}>
+                              <div className={styles.video}></div>
+                              <div className={styles.text1}>Pedro Costa</div>
+                              <div className={styles.text2}>Estudiante de Ingeniería</div>
+                          </div>
+                          <div className={styles.carouselitem}>
+                              <div className={styles.video}></div>
+                              <div className={styles.text1}>Ana Flores</div>
+                              <div className={styles.text2}>Estudiante de Medicina Humana</div>
+                          </div>
+                          <div className={styles.carouselitem}>
+                              <div className={styles.video}></div>
+                              <div className={styles.text1}>Carlos Esquivel</div>
+                              <div className={styles.text2}>Estudiante de Arquitectura</div>
+                          </div>
+                      </div>
+                  </Carousel>
+            </div>
           </div>
           <div className={styles.bannerB}>
               <img src="./assets/images/nets.png" style={{objectFit: 'cover', width: '100%'}}/>

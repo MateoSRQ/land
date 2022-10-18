@@ -45,7 +45,7 @@ html, body, :global(#root) {
   transform-origin: top center;
 }
 
-.bannerC, .bannerD {
+.bannerC, .bannerD, .bannerB {
   position: relative;
 }
 
@@ -92,6 +92,30 @@ html, body, :global(#root) {
   letter-spacing: -.7px;
 }
 
+.main :global(.ant-collapse) li {
+  /*background-color: #17c6de !important;*/
+  border: none !important;
+  border-radius: 30px !important;
+  color: #4a49b0 !important;
+  font-family: "Fivo Sans", cursive !important;
+  font-size: 24px !important;
+  font-weight: 500 !important;
+  font-style: italic;
+  letter-spacing: -.7px;
+}
+
+.main .bannerD :global(.ant-collapse) li {
+  /*background-color: #17c6de !important;*/
+  border: none !important;
+  border-radius: 30px !important;
+  color: #4141a4 !important;
+  font-family: "Fivo Sans", cursive !important;
+  font-size: 24px !important;
+  font-weight: 500 !important;
+  font-style: italic;
+  letter-spacing: -.7px;
+}
+
 .main :global(.ant-collapse) :global(.ant-collapse-content) {
   background-color: transparent !important;
 }
@@ -110,6 +134,65 @@ html, body, :global(#root) {
 .main :global(.ant-collapse-content-active) {
   background-color: transparent !important;
   color: white !important;
+}
+
+.carousel {
+  position: absolute;
+  top: 320px;
+  height: 460px;
+  width: 100%;
+}
+
+:global(.ant-carousel) {
+  height: 100% !important;
+}
+
+:global(.ant-carousel) *{
+  /*height: 100% !important;*/
+}
+
+
+.carouselitem {
+  width: 33.3%;
+  height: 100%;
+  background-color: #4a49b0;
+  float: left;
+  margin: 0 auto;
+}
+
+.carouselitem .video {
+  width: 90%;
+  height: 260px !important;
+  background-color: #000000;
+  margin-left: 5%;
+}
+
+.carouselitem .text1 {
+  color: #17c5dd !important;
+  font-family: "Fivo Sans", cursive !important;
+  font-size: 32px !important;
+  font-weight: 900 !important;
+  height: 36px !important;
+  font-style: italic;
+  text-align: center;
+  letter-spacing: -.5px;
+
+}
+
+.carouselitem .text2 {
+  color: #ffffff !important;
+  font-family: "Fivo Sans", cursive !important;
+  font-size: 30px !important;
+  font-weight: 200 !important;
+  height: 32px !important;
+  text-align: center;
+  font-style: normal !important;
+  letter-spacing: .5px;
+  margin-top: 6px;
+}
+
+:global(.site-back-top) {
+  background-color: #17c5dd !important;
 }
 
 
