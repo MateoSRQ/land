@@ -154,28 +154,28 @@ function App() {
 
                       <Panel header="Facultad de Ciencias Empresariales y Educación" key="1">
                           <ul>
-                              <li>Administración y Negocios Internacionales</li>
-                              <li>Ciencias Contables y Financieras</li>
-                              <li>Turismo, Hotelería y Gastronomía</li>
-                              <li>Ciencias de la Comunicación</li>
-                              <li>Ciencias del Deporte</li>
-                              <li>Educación</li>
+                              <li><a href="./assets/documents/Brochure_ ADMINISTRACIÓN Y NEGOCIOS INTERNACIONALES.pdf">Administración y Negocios Internacionales</a></li>
+                              <li><a href="./assets/documents/Brochure_ CIENCIAS CONTABLES Y FINANCIERAS.pdf">Ciencias Contables y Financieras</a></li>
+                              <li><a href="./assets/documents/Brochure_TURISMO.pdf">Turismo, Hotelería y Gastronomía</a></li>
+                              <li><a href="./assets/documents/Brochure_ CIENCIAS DE LA COMUNICACIÓN.pdf">Ciencias de la Comunicación</a></li>
+                              <li><a href="./assets/documents/Brochure_ CIENCIAS DEL DEPORTE.pdf">Ciencias del Deporte</a></li>
+                              <li><a href="./assets/documents/Brochure_ EDUCACIÓN.pdf">Educación</a></li>
                           </ul>
                       </Panel>
                       <Panel header="Facultad de Derecho y Ciencias Políticas" key="2">
                           <ul>
-                              <li>Derecho</li>
+                              <li><a href="./assets/documents/Brochure_DERECHO.pdf">Derecho</a></li>
                           </ul>
-                      </Panel>
+                      </Panel>443
                       <Panel header="Facultad de Ingeniería y Arquitectura" key="3">
                               <ul>
-                                  <li>Ingeniería Civil</li>
-                                  <li>Ingeniería Ambiental</li>
-                                  <li>Ingeniería de Minas</li>
-                                  <li>Ingeniería Mecánica</li>
-                                  <li>Ingeniería de Sistemas e Informática</li>
-                                  <li>Ingeniería Electrónica y Telecomunicaciones</li>
-                                  <li>Ingeniería Industrial</li>
+                                  <li><a href="./assets/documents/Brochure_ INGENIERÍA CIVIL.pdf">Ingeniería Civil</a></li>
+                                  <li><a href="./assets/documents/Brochure_ INGENIERÍA AMBIENTAL.pdf">Ingeniería Ambiental</a></li>
+                                  <li><a href="./assets/documents/Brochure_ INGENIERÍA DE MINAS.pdf">Ingeniería de Minas</a></li>
+                                  <li><a href="./assets/documents/Brochure_ INGENIERÍA MECÁNICA.pdf">Ingeniería Mecánica</a></li>
+                                  <li><a href="./assets/documents/Brochure_ INGENIERÍA DE SISTEMAS E INFORMÁTICA.pdf">Ingeniería de Sistemas e Informática</a></li>
+                                  <li><a href="./assets/documents/Brochure_ INGENIERÍA ELECTRÓNICA Y TELECOMUNICACIONES.pdf">Ingeniería Electrónica y Telecomunicaciones</a></li>
+                                  <li><a href="./assets/documents/Brochure_ INGENIERÍA INDUSTRIAL.pdf">Ingeniería Industrial</a></li>
                               </ul>
                       </Panel>
                       <Panel header="Facultad de Ciencias Agropecuarias" key="4">
